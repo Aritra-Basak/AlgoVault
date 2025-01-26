@@ -1,3 +1,4 @@
+package LeetCode2k25;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
