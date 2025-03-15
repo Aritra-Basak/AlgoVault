@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dsa_learnings;
+package dsa_learnings.BinarySearch;
 
 /**
  * Finding a target in an ifinite sorted array..Infinite means we can't use the array.length

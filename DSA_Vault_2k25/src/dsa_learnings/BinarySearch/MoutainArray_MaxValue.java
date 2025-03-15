@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dsa_learnings;
+package dsa_learnings.BinarySearch;
 
 /**
  * Finding the largest or the peak element in a mountain array i.e. an array whoose starting part is sorted in ascending order and the later part in descending order.

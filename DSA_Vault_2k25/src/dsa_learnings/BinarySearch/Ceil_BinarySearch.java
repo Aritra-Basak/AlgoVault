@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dsa_learnings;
+package dsa_learnings.BinarySearch;
 
 /**
  * Ceil of a target element in an array is the immediate greater number than the target number or the target itself			

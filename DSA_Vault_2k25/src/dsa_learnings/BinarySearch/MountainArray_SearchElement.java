@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dsa_learnings;
+package dsa_learnings.BinarySearch;
 
 /**
  * First find the peak of the mountainArray

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dsa_learnings;
+package dsa_learnings.BinarySearch;
 
 /**
  * FLoor of a target element in an array is the immediate smaller number than the target number	or the target itself		

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dsa_learnings;
+package dsa_learnings.BinarySearch;
 
 /**
  * To perform Binary Search in an order-agnostic Array i.e. Array sorting order is unkown, whether Ascending or Descending.
