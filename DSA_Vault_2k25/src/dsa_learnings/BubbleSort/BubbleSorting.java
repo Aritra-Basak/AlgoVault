@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dsa_learnings.BubbleSort;
+package DSA_Vault_2k25.src.dsa_learnings.BubbleSort;
 
 import java.util.Arrays;
 

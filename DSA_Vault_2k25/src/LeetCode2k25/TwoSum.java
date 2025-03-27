@@ -38,7 +38,7 @@ public class TwoSum {
 	    for(int i =0;i<nums.length;i++){
 	        int diff = target-nums[i];
 	        if(map.containsKey(diff)){
-	            return new int[]{map.get(diff),i};
+	            return new int[]{map.get(diff),i}; //returns the difference's index and the current element index.
 	        }
 	            map.put(nums[i],i);
 	    }

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dsa_learnings.InsertionSort;
+package DSA_Vault_2k25.src.dsa_learnings.InsertionSort;
 
 import java.util.Arrays;
 

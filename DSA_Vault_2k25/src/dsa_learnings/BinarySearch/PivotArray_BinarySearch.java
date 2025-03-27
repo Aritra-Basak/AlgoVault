@@ -61,7 +61,7 @@ public class PivotArray_BinarySearch {
 		int end =arr.length-1;
 		while(start<=end) {
 			int mid =start+(end-start)/2;
-			if(mid<end && arr[mid]>arr[mid+1]) {
+			if(mid<end && arr[mid]>arr[mid+1]) {//we are also checking mid<end because if there may be a case/scenario that mid is = end so mid+1 will throw error.
 				return mid;
 			}else if (mid>start && arr[mid]<arr[mid-1]) {
 				return mid-1;
