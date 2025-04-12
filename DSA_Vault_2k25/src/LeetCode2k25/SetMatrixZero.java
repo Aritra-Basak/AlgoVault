@@ -92,7 +92,7 @@ public class SetMatrixZero {
 
         for(int i=0;i<row.length;i++){
             for(int j=0;j<col.length;j++){
-                if (row[i] == 1 || col[j] == 1) {
+                if (row[i] == 1 || col[j] == 1) {// we are keeping the condition as or because else if we keep and then the existing 0 element will be the only 0-element as that is the condition when row[i] & col[j] is 0
                     matrix.get(i).set(j, 0);
                 }
             }
