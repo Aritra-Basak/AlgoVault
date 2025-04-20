@@ -1,4 +1,4 @@
-package dsa_learnings.SelectionSort;
+package DSA_Vault_2k25.src.dsa_learnings.SelectionSort;
 
 import java.util.Arrays;
 
@@ -28,8 +28,8 @@ public static void main(String[] args) {
 	public static int maxIndex(int[] arr, int start, int last) {
 		int max=start;
 		for(int i =start;i<=last;i++) {
-			if(arr[max]<=arr[i])
-				max=i;
+		if(arr[i]>arr[max])
+			max=i;
 		}
 		return max;
 	}
