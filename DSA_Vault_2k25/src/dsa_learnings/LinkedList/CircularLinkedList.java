@@ -32,7 +32,12 @@ public class CircularLinkedList {
         }
     }
 
+    //To detect whether the Linked List is cyclic or not. Using Floyd’s Cycle Detection Algorithm (also known as the Tortoise and Hare Algorithm)
     //checks whether a given Linked List is a circular Linked List or not....
+    //1 → 2 → 3 → 4 → 5
+    //          ↑     ↓
+    //          ← ← ←
+    //Considering above Circular Linked List: when slowPointer and fastPointer starts from head, then when slowPointer moves 1 step and fastPointer moves 2 steps then at the end they again meet 3.
     public boolean isACyleLinkedList(Node head){
         Node fastPointer =head;
         Node slowPointer =head;
@@ -57,10 +62,12 @@ public class CircularLinkedList {
 
     }
 
+    //To detect whether the Linked List is cyclic or not. Using Floyd’s Cycle Detection Algorithm (also known as the Tortoise and Hare Algorithm)
     public int detectCycle(Node node){
         int length=0;
         Node fast =node;
         Node slow =node;
+        //detecting the cycle
         while(fast!=null && fast.next!=null){
             fast=fast.next.next;
             slow=slow.next;
@@ -69,20 +76,30 @@ public class CircularLinkedList {
                 break;
             }
         }
-
+        System.out.println("Length is :"+length);
         if(length==0)return -1;
+
+        //1 → 2 → 3 → 4 → 5
+        //          ↑     ↓
+        //          ← ← ←
+        // After moving the s to length steps it end or points at 3
+        // Now start moving f with s, one at each step, then s and f meet each other at 3 again and that is the cyclic point.
+
         Node f=node;
         Node s =node;
+        //Find the Start of the Cycle
+        //We moved pointer s length steps ahead of pointer f.
         while(length>0){
             s=s.next;
             length--;
         }
-
+        //Move Both Pointers Together
+        //The point where they meet is the start of the cycle.
         while(f!=s){
             s=s.next;
             f=f.next;
         }
-        return s.value;
+        return f.value;
     }
 
     public Node getHead(){

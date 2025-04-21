@@ -4,15 +4,15 @@ import java.util.List;
 
 public class UseOfLinkedList {
     public static void main(String [] args){
-        System.out.println("\n----------------- Single Linked List -----------------");
-        Aritras_LinkedList list = new Aritras_LinkedList();
-        list.insertFirst(10);
-        list.insertFirst(5);
-        list.insertFirst(15);
-        list.insertFirst(50); //this will be the latest head
-        list.insertLast(20);
-        list.insert(30,2);
-        list.displayList();
+//        System.out.println("\n----------------- Single Linked List -----------------");
+//        Aritras_LinkedList list = new Aritras_LinkedList();
+//        list.insertFirst(10);
+//        list.insertFirst(5);
+//        list.insertFirst(15);
+//        list.insertFirst(50); //this will be the latest head
+//        list.insertLast(20);
+//        list.insert(30,2);
+//        list.displayList();
 //        System.out.println("First Node deleted: "+list.deleteFirst());
 //        list.displayList();
 //        System.out.println("Last Node deleted: "+list.deleteLast());
@@ -64,6 +64,6 @@ public class UseOfLinkedList {
         System.out.println(cll.isACyleLinkedList(cll.getHead()));
         System.out.println(cll.getLenghtOfCycle(cll.getHead()));
 
-        System.out.println(cll.detectCycle(cll.getHead()));
+        System.out.println("Cyclic Point is: "+cll.detectCycle(cll.getHead()));
     }
 }

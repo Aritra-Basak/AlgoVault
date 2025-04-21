@@ -157,6 +157,67 @@ public class Aritras_LinkedList{
         ans.displayList();
     }
 
+    //To find the middle of the LinkedList we are using the 2 pointer-Slow and Fast Pointer method. By the time fast pointer reaches the end with double the speed of slow pointer, the slow pointer will reach the half & that is the ans.
+    public int getTheMiddleNode(Aritras_LinkedList list){
+        Node fastPointer = list.getNode(0);
+        Node slowPointer = list.getNode(0);
+        while(fastPointer !=null && fastPointer.next!=null){
+            fastPointer=fastPointer.next.next;
+            slowPointer=slowPointer.next;
+        }
+        return slowPointer.value;
+    }
+
+
+    //Sorting the LinkedList using Merge Sort....
+    public Node sortList(Node headNode){
+        if(headNode==null || headNode.next==null)return headNode;
+        Node midPoint =getTheMiddleNodeForMergeSort(headNode);
+        Node leftListHead=sortList(headNode);
+        Node rightListHead=sortList(midPoint);
+        return mergeTwoList(leftListHead,rightListHead);
+
+    }
+    private Node getTheMiddleNodeForMergeSort(Node headNode){
+        Node midPrev=null;
+        while(headNode!=null && headNode.next!=null){
+            midPrev=(midPrev==null)?head:midPrev.next;
+            headNode=headNode.next.next;
+        }
+        Node mid=midPrev.next; // finds the mid point
+        midPrev.next=null; // detaches the linkedlist till head to before of the mid point.ss
+        return mid;
+    }
+
+    private Node mergeTwoList(Node l1Node, Node l2Node){
+        Node dummyHead = new Node();
+        Node tail = dummyHead;
+        while(l1Node !=null && l2Node!=null){
+            if(l1Node.value<l2Node.value){
+                tail.next=l1Node;
+                tail=l1Node;
+                l1Node=l1Node.next;
+            }else{
+                tail.next=l2Node;
+                tail=l1Node;
+                l2Node=l2Node.next;
+            }
+        }
+
+        while(l1Node!=null){
+            tail.next=l1Node;
+            tail=l1Node;
+            l1Node=l1Node.next;
+        }
+        while(l2Node!=null){
+            tail.next=l2Node;
+            tail=l1Node;
+            l2Node=l2Node.next;
+        }
+
+        return dummyHead.next; //returning the dummyHead.next which is the real head of the LinkedList.
+    }
+
     // Recursive use.....
 
     public void insertNodeRecursively(int index, int value){
@@ -184,6 +245,7 @@ public class Aritras_LinkedList{
         public Node(int value){
             this.value=value;
         }
+        public Node(){};
 
     }
 }
