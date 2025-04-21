@@ -46,15 +46,43 @@ public class CircularLinkedList {
     }
 
     //to get the length of the Circular Linked List
-    public int getLenghtOfCycle(Node head){
-            Node temp=head;
-            int length=0;
-            do{
-                temp=temp.next;
-                length++;
-            }while(temp!=head);
-            return length;
+    public int getLenghtOfCycle(Node head) {
+        Node temp = head;
+        int length = 0;
+        do {
+            temp = temp.next;
+            length++;
+        } while (temp != head);
+        return length;
 
+    }
+
+    public int detectCycle(Node node){
+        int length=0;
+        Node fast =node;
+        Node slow =node;
+        while(fast!=null && fast.next!=null){
+            fast=fast.next.next;
+            slow=slow.next;
+            if(slow==fast){
+                length=getLenghtOfCycle(slow);
+                break;
+            }
+        }
+
+        if(length==0)return -1;
+        Node f=node;
+        Node s =node;
+        while(length>0){
+            s=s.next;
+            length--;
+        }
+
+        while(f!=s){
+            s=s.next;
+            f=f.next;
+        }
+        return s.value;
     }
 
     public Node getHead(){

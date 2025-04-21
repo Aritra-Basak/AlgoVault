@@ -54,6 +54,7 @@ public class UseOfLinkedList {
 //        new Aritras_LinkedList().mergeLinkedList(l1,l2);
         System.out.println("\n----------------- Circular Linked List -----------------");
         CircularLinkedList cll = new CircularLinkedList();
+        cll.insertInCll(50);
         cll.insertInCll(23);
         cll.insertInCll(3);
         cll.insertInCll(19);
@@ -62,5 +63,7 @@ public class UseOfLinkedList {
 
         System.out.println(cll.isACyleLinkedList(cll.getHead()));
         System.out.println(cll.getLenghtOfCycle(cll.getHead()));
+
+        System.out.println(cll.detectCycle(cll.getHead()));
     }
 }
