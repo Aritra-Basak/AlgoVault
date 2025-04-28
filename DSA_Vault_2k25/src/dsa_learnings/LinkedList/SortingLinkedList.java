@@ -1,6 +1,6 @@
 package DSA_Vault_2k25.src.dsa_learnings.LinkedList;
 
-public class SortinLinkedList {
+public class SortingLinkedList {
     public static void main(String [] args){
         Aritras_LinkedList list = new Aritras_LinkedList();
         list.insertFirst(10);
@@ -10,7 +10,7 @@ public class SortinLinkedList {
         list.insertFirst(50);
 
         list.displayList();
-        list.sortList(list.getNode(0));
+        list.helperSortLl(list.getNode(0));
         list.displayList();
 
 

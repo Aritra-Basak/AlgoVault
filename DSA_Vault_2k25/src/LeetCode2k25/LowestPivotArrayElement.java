@@ -44,7 +44,7 @@ public class LowestPivotArrayElement {
 			if(mid<end && arr[mid]>arr[mid+1]) {//we are also checking mid<end because if there may be a case/scenario that mid is = end so mid+1 will throw error.
 				return arr[mid+1]; //the lowest value is the element initially at the start before being rotated.
 			}else if(mid>start && arr[mid]<arr[mid-1]) {
-				return arr[mid-1];
+				return arr[mid];
 			}else if(arr[mid]<=arr[start]) {
 				end=mid-1; //if my mid is in the right part of the pivot, where elements are lesser than start
 			}else {

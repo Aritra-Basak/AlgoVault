@@ -15,7 +15,7 @@ public class MountainArray_SearchElement {
 	
 	public static void main(String [] args) {
 		int [] arr = {1,3,5,7,8,9,10,11,6,4,2};
-		int target =9;
+		int target =4;
 		System.out.println("The target element in the mountain array is in: "+binarySearch(arr,target,findThePeakElement(arr)));
 		
 	}
@@ -34,7 +34,7 @@ public class MountainArray_SearchElement {
 		return start;
 	}
 	
-	public static int binarySearch(int arr[], int target, int peak) {
+	public static int binarySearch(int[] arr, int target, int peak) {
 		int start=0;
 		int end =peak;
 		while(start<=end) {

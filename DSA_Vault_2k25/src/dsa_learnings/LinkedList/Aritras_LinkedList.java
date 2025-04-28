@@ -1,5 +1,7 @@
 package DSA_Vault_2k25.src.dsa_learnings.LinkedList;
 
+import DSA_Vault_2k25.src.LeetCode2k25.MyCustomLinkedList;
+
 //Custom LinkedList
 public class Aritras_LinkedList{
     private Node head;
@@ -170,54 +172,54 @@ public class Aritras_LinkedList{
 
 
     //Sorting the LinkedList using Merge Sort....
+    public void helperSortLl(Node headNode){
+       head= sortList(headNode); //update the new head after sorting..
+    }
     public Node sortList(Node headNode){
         if(headNode==null || headNode.next==null)return headNode;
         Node midPoint =getTheMiddleNodeForMergeSort(headNode);
         Node leftListHead=sortList(headNode);
         Node rightListHead=sortList(midPoint);
-        return mergeTwoList(leftListHead,rightListHead);
+        return mergeThe2List(leftListHead,rightListHead);
 
     }
     private Node getTheMiddleNodeForMergeSort(Node headNode){
-        Node midPrev=null;
-        while(headNode!=null && headNode.next!=null){
-            midPrev=(midPrev==null)?head:midPrev.next;
-            headNode=headNode.next.next;
+        Node fastPointer = headNode;
+        Node slowPointer = headNode;
+        Node prev = null;
+
+        while(fastPointer != null && fastPointer.next != null){
+            prev = slowPointer;
+            slowPointer = slowPointer.next;
+            fastPointer = fastPointer.next.next;
         }
-        Node mid=midPrev.next; // finds the mid point
-        midPrev.next=null; // detaches the linkedlist till head to before of the mid point.ss
-        return mid;
+        if (prev != null) {
+            prev.next = null; // break the list into two halves
+        }
+        return slowPointer;
     }
 
-    private Node mergeTwoList(Node l1Node, Node l2Node){
-        Node dummyHead = new Node();
-        Node tail = dummyHead;
-        while(l1Node !=null && l2Node!=null){
-            if(l1Node.value<l2Node.value){
-                tail.next=l1Node;
-                tail=l1Node;
-                l1Node=l1Node.next;
-            }else{
-                tail.next=l2Node;
-                tail=l1Node;
-                l2Node=l2Node.next;
+    private Node mergeThe2List(Node leftListHead,Node rightListHead){
+       Node dummyHead = new Node();
+       Node tail = dummyHead;
+
+        while(leftListHead != null && rightListHead != null){
+            if(leftListHead.value < rightListHead.value){
+                tail.next = leftListHead;
+                leftListHead = leftListHead.next;
+            } else {
+                tail.next = rightListHead;
+                rightListHead = rightListHead.next;
             }
+            tail = tail.next;
         }
 
-        while(l1Node!=null){
-            tail.next=l1Node;
-            tail=l1Node;
-            l1Node=l1Node.next;
-        }
-        while(l2Node!=null){
-            tail.next=l2Node;
-            tail=l1Node;
-            l2Node=l2Node.next;
-        }
+        // attach the remaining part
+        if(leftListHead != null) tail.next = leftListHead;
+        if(rightListHead != null) tail.next = rightListHead;
 
-        return dummyHead.next; //returning the dummyHead.next which is the real head of the LinkedList.
+        return dummyHead.next;
     }
-
     // Recursive use.....
 
     public void insertNodeRecursively(int index, int value){

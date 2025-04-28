@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dsa_learnings.BinarySearch;
+package DSA_Vault_2k25.src.dsa_learnings.BinarySearch;
 
 /**
  * THere is an integer array sorted in an ascending order (with distinct values)

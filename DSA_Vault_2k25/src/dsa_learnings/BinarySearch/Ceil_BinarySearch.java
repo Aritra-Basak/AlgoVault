@@ -28,7 +28,7 @@ public class Ceil_BinarySearch {
 				return mid; // if we need to return always the greater number then remove this.
 		 }
 		 return start;
-		 //returning the start, because at the last iteration when the condition(start<=end) gets violated while start suppressing the end will denote the ceil.
+		 //returning the start, because at the last iteration when the condition(start<=end) gets violated while start suppressing the end, will denote the ceil.
 	}
 	
 	public static void main(String[] args) {

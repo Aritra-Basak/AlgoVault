@@ -22,7 +22,7 @@ public class MergeSort {
     public static int [] mergeSort(int [] arr){
         if(arr.length==1)return arr;
         int mid= arr.length/2;
-        //Copies the specified range of the specified array into a new array, the to position is exlusive
+        //Copies the specified range of the specified array into a new array, the to position is exclusive
         int [] leftPart=mergeSort(Arrays.copyOfRange(arr,0,mid));
         int [] rightPart=mergeSort(Arrays.copyOfRange(arr,mid,arr.length));
         return mergeArray(leftPart,rightPart);

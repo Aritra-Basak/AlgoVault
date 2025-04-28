@@ -40,11 +40,11 @@ public class MaximumSubarraySum {
 	//Space Complexity: O(1) as we are not using any extra space.
 	public static int maxSubArraySum(int [] arr) {
 		int maxSum=Integer.MIN_VALUE;
+		if(arr.length==1) {
+			maxSum=arr[0];
+			return maxSum;
+		}
 		for(int i=0;i<arr.length;i++) {
-			if(arr.length==1) {
-				maxSum=arr[0];
-				break;
-			}
 			int tot=arr[i];
 			if(i==arr.length-1) {
 				maxSum=Math.max(maxSum,arr[i]);

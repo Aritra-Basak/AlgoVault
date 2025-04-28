@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dsa_learnings.BinarySearch;
+package DSA_Vault_2k25.src.dsa_learnings.BinarySearch;
 
 /**
  * Finding a target in an ifinite sorted array..Infinite means we can't use the array.length
@@ -21,7 +21,7 @@ public class BinarySearch_infiniteArray {
 		int start =0;
 		int end =start +1;
 		while(target>arr[end]) {
-			int tempStart=start+1;
+			int tempStart=end;
 			//double the current window size = end + previous window size *2
 			end =end+(end-start+1)*2;
 			start =tempStart;
