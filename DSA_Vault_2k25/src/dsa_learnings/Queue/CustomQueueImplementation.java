@@ -12,6 +12,17 @@ public class CustomQueueImplementation {
         System.out.println("Element eliminated from the QUEUE: "+queue.pop());
         queue.display();
 
+        System.out.println("Circular Queue.......");
+        CircularQueue cQueue = new CircularQueue();
+        cQueue.push(1);
+        cQueue.push(3);
+        cQueue.push(5);
+        cQueue.push(7);
+        cQueue.push(9);
+        cQueue.display();
+        System.out.println("Element eliminated from the QUEUE: "+cQueue.remove());
+        cQueue.push(10);
+        cQueue.display();
 
     }
 

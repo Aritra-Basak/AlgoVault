@@ -33,7 +33,7 @@ public class CircularQueue {
             throw new Exception("Queue is empty");
 
         int remove=data[front++];
-        front=front% data.length;
+        front=front% data.length; // the data.length is 10 or any specific size. So front%10 will be front itself until front=data.length, then it's % will be 0, again making front =0
         size--;
         return remove;
         }
@@ -42,6 +42,16 @@ public class CircularQueue {
         if (isEmpty())
             throw new Exception("Queue is empty");
         return data[front];
+    }
+
+    public void display() throws Exception{
+        if(isEmpty())
+            throw new Exception("Queue is Empty");
+        int i=front;
+        do{
+            System.out.println(data[i++]);
+            i=i%data.length;
+        }while (i!=end);
     }
 }
 
