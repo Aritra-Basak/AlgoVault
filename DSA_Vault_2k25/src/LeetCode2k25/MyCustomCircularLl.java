@@ -4,9 +4,7 @@ import java.util.HashMap;
 
 public class MyCustomCircularLl {
     Node head;
-    Node tail;
-
-    int size;
+     int size;
 
     MyCustomCircularLl(){
         this.size=0;

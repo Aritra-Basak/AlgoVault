@@ -31,7 +31,7 @@ public class QuickSort {
         if(start>=end)return; //base condition
         int s=start,e=end,mid=s+(e-s)/2, pivot=arr[mid];
         while(s<=e){
-            //in quick sort, it will not sort if the array is already sorted, but in merger it will do, that's why quick sort is preferred for array sorting.6
+            //in quick sort, it will not sort if the array is already sorted, but in merge it will do, that's why quick sort is preferred for array sorting.6
             while(arr[s]<pivot){
                 s++;
             }

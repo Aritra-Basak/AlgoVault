@@ -28,21 +28,21 @@ public class MergeSort {
         return mergeArray(leftPart,rightPart);
     }
 
-    private static int [] mergeArray(int[] leftArray, int[]rightArrray){
+    private static int [] mergeArray(int[] leftArray, int[]rightArray){
         int i=0, j=0, k=0;
-        int[] result =new int[leftArray.length+rightArrray.length];
-        while(i<leftArray.length  && j<rightArrray.length){
-            if(leftArray[i]<rightArrray[j]){
+        int[] result =new int[leftArray.length+rightArray.length];
+        while(i<leftArray.length  && j<rightArray.length){
+            if(leftArray[i]<rightArray[j]){
                 result[k++]=leftArray[i++];
             }else{
-                result[k++]=rightArrray[j++];
+                result[k++]=rightArray[j++];
             }
         }
         while(i<leftArray.length){
             result[k++]=leftArray[i++];
         }
-        while(j<rightArrray.length){
-            result[k++]=rightArrray[j++];
+        while(j<rightArray.length){
+            result[k++]=rightArray[j++];
         }
         return result;
     }

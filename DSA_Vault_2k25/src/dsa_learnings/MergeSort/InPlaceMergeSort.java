@@ -5,7 +5,7 @@ import java.util.Arrays;
 //Instead of creating a new array everytime we are using pointers to manipulate the elements at every iterations.
 public class InPlaceMergeSort {
     public static void main(String [] args){
-        int arr[] = {1,4,2,3,9,6};
+        int[] arr = {1,4,2,3,9,6};
         mergeSortInPlace(arr,0, arr.length);
         System.out.println(Arrays.toString(arr));
 
