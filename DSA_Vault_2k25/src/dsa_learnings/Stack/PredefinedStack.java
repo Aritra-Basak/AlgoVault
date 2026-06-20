@@ -1,4 +1,4 @@
-package DSA_Vault_2k25.src.Stack;
+package DSA_Vault_2k25.src.dsa_learnings.Stack;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package DSA_Vault_2k25.src.QuickSort;
+package DSA_Vault_2k25.src.dsa_learnings.QuickSort;
 
 import java.util.Arrays;
 

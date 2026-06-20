@@ -23,8 +23,3 @@ public class Fibonnaci {
 
     }
 }
-
-/// order kart and inventory kart
-// 0               1
-//1                0 --autocomplete
-

@@ -1,4 +1,4 @@
-package DSA_Vault_2k25.src.Stack;
+package DSA_Vault_2k25.src.dsa_learnings.Stack;
 
 public class Aritra_Custom_Stack {
     private int [] data;
