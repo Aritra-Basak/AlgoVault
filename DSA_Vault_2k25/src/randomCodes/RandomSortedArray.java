@@ -1,4 +1,4 @@
-package randomCodes;
+package DSA_Vault_2k25.src.randomCodes;
 
 import java.util.Arrays;
 import java.util.Random;

@@ -21,7 +21,7 @@ public class BubbleSorting {
 	
 	public static int[] sorting(int [] arr) {
 		boolean sorted=false;
-		for (int i=0;i<arr.length;i++) {
+		for (int i=0;i<arr.length-1;i++) {
 			//iterating the number of pass required to sort the full array.
 			for (int j=0;j<arr.length-i-1;j++) { // arr.length-i-1 because each time of a single pass the largest element gets sorted and we don't need to iterate over that.
 				if(arr[j]>arr[j+1]) {
