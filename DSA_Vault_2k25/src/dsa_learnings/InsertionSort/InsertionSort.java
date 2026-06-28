@@ -10,7 +10,7 @@ import java.util.Arrays;
  *
  */
 public class InsertionSort {
-	
+	// In insertion sort we take one element and check on the left side whether it is smaller than the left side elements or not, if it is smaller, then we swap it with the left side element and keep on checking until we reach the start of the array or we find an element which is smaller than the current element.
 	public static void main(String [] args) {
 		int arr[] = {1,4,2,3,9,6};
 //		int arr[] = {1,2,3,4,6};

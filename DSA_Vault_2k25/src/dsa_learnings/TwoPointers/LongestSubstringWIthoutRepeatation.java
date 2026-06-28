@@ -1,4 +1,4 @@
-package DSA_Vault_2k25.src.LeetCode2k25;
+package DSA_Vault_2k25.src.dsa_learnings.TwoPointers;
 
 public class LongestSubstringWIthoutRepeatation {
     public static void main(String[] args) {
