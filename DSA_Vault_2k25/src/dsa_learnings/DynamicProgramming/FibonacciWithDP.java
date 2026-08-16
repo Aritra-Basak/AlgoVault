@@ -3,6 +3,7 @@ package DSA_Vault_2k25.src.dsa_learnings.DynamicProgramming;
 import java.util.HashMap;
 
 public class FibonacciWithDP {
+    // Using HashMap for a better look up (O(1))
     public static int fibo(int n, HashMap<Integer, Integer> memo){
         if(n<2) return n;
 
@@ -13,6 +14,7 @@ public class FibonacciWithDP {
         return fiboSum;
     }
 
+    // non dp method
     public static int fibo(int n){
         if(n<2) return n;
         return fibo(n-1)+fibo(n-2);
