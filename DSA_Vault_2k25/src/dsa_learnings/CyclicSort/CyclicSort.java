@@ -21,8 +21,8 @@ public class CyclicSort {
 	public static int[] sorting(int[]arr) {
 		int i=0;
 		while(i<arr.length) {
-			// As all consecutive numbers are present there, so in an ideally sorted array the value of the array at index i should be array[i] -1 = i or arr[i] should be = arr[arr[i]-1]
-			if(arr[i]!=arr[arr[i]-1]) {
+			// As all consecutive numbers are present there, so in an ideally sorted array the value of the array at index i should be array[i] -1 = i
+			if(arr[i]-1!=i) {
 				swap(arr, i,arr[i]-1);
 			}else {
 				i++;

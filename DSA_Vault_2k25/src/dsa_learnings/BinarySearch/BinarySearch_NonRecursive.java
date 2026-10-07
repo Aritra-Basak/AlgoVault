@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dsa_learnings.BinarySearch;
+package DSA_Vault_2k25.src.dsa_learnings.BinarySearch;
 
 /**
  * To perform binary search in the non recursive manner...
