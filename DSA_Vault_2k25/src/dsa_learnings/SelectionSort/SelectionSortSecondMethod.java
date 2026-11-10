@@ -16,7 +16,7 @@ public class SelectionSortSecondMethod {
         for(int i=0;i<nums.length;i++){
             // number of pass involved
             currentSmallest=i;
-            for(int j=i+1;j<nums.length;j++){ // to check th smallest element index position
+            for(int j=i+1;j<nums.length;j++){ // to check the smallest element index position
                 if(nums[j]<nums[currentSmallest]){
                     // find the smallest element's index other than current i
                     currentSmallest=j;
