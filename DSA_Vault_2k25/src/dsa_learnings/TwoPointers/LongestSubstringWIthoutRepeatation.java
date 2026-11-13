@@ -2,7 +2,7 @@ package DSA_Vault_2k25.src.dsa_learnings.TwoPointers;
 
 public class LongestSubstringWIthoutRepeatation {
     public static void main(String[] args) {
-        String str = "abceabcbb";
+        String str = "abceabcdebb";
         System.out.println(lengthOfLongestSubstring(str));
     }
 
@@ -17,7 +17,7 @@ public class LongestSubstringWIthoutRepeatation {
             asciArray[c]++;
             while(asciArray[c]>1){
                 left++;
-                asciArray[c]--;
+                asciArray[c]=0;
                 right=left;
             }
             if(right-left+1>maxLength){
